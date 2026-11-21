@@ -3,7 +3,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url("/Project SHINE/projectSHINE.jpg");
+    background-image: url("projectSHINE.jpg");
     transition: background 0.5s ease;
     margin: 0;
     padding: 15px 20px;
