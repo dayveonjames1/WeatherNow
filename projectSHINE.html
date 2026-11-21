@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherNow</title>
+    <link rel="stylesheet" href="projectSHINE.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1 id="header">WeatherNow</h1>
+    <p id="subtitle">A Simple Interactive Weather Web Page</p>
+
+    <form class="weatherForm">
+        <input type="text" class="cityInput" placeholder="Quezon City, PH">
+        <button type="submit">Get Weather</button>
+        <button type="button" class="locationButton"><i class="fa-solid fa-location-crosshairs"></i></button>
+    </form>
+
+    <div class="brandCard">
+        <h2>Project SHINE</h2>
+        <p class="schoolYear">S.Y 2026-2027</p>
+        <p class="schoolName">PSHS-MC</p>
+        <p class="authorName"><b>Made by:</b> Da02 ASI</p>
+    </div> 
+    
+    <div class="attributionCard">
+        <p><b>Made possible by:</b></p>
+        <span class="openWeatherBrand">OpenWeather</span>
+    </div>
+
+    <div class="dashboardSplit">
+        <div class="leftColumn">
+            <div class="simpleCard"></div>
+            <div class="detailsCard"></div>
+        </div>
+        <div class="rightColumn">
+            <div class="forecastCard"></div>
+            <div class="chartCard">
+                <h3>24-Hour Temperature Trend</h3>
+                <canvas id="hourlyChart"></canvas>
+            </div>
+            <div class="settingsCard">
+                <h3>Settings</h3>
+                <div class="settingsGrid">
+                    <div class="settingRow">
+                        <span>Temp</span>
+                        <div class="toggleGroup">
+                            <button type="button" class="toggleBtn active" data-setting="temp" data-value="C">°C</button>
+                            <button type="button" class="toggleBtn" data-setting="temp" data-value="F">°F</button>
+                            <button type="button" class="toggleBtn" data-setting="temp" data-value="K">K</button>
+                        </div>
+                    </div>
+                    <div class="settingRow">
+                        <span>Time</span>
+                        <div class="toggleGroup">
+                            <button type="button" class="toggleBtn active" data-setting="time" data-value="12h">12H</button>
+                            <button type="button" class="toggleBtn" data-setting="time" data-value="24h">24H</button>
+                        </div>
+                    </div>
+                    <div class="settingRow">
+                        <span>Speed</span>
+                        <div class="toggleGroup">
+                            <button type="button" class="toggleBtn active" data-setting="wind" data-value="ms">m/s</button>
+                            <button type="button" class="toggleBtn" data-setting="wind" data-value="kph">kph</button>
+                            <button type="button" class="toggleBtn" data-setting="wind" data-value="mph">mph</button>
+                        </div>
+                    </div>
+                    <div class="settingRow">
+                        <span>Distance</span>
+                        <div class="toggleGroup">
+                            <button type="button" class="toggleBtn active" data-setting="distance" data-value="km">km</button>
+                            <button type="button" class="toggleBtn" data-setting="distance" data-value="mi">mi</button>
+                        </div>
+                    </div>
+                    <div class="settingRow">
+                        <span>Pressure</span>
+                        <div class="toggleGroup">
+                            <button type="button" class="toggleBtn active" data-setting="pressure" data-value="hPa">hPa</button>
+                            <button type="button" class="toggleBtn" data-setting="pressure" data-value="mb">mb</button>
+                            <button type="button" class="toggleBtn" data-setting="pressure" data-value="inHg">inHg</button>
+                            <button type="button" class="toggleBtn" data-setting="pressure" data-value="mmHg">mmHg</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="projectSHINE.js"></script>
+</body>
+</html>
