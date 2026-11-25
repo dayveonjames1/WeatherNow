@@ -220,7 +220,7 @@ function displayWeatherInfo(data){
         timeDisplay.textContent = timeString;
         tempDisplay.textContent = formatTemp(temp);
         feelsLikeDisplay.textContent = `Feels like: ${formatTemp(feels_like)}`;
-        humidityDisplay.innerHTML = `<i class="fa-solid fa-droplet"></i> ${humidity}%`;
+        humidityDisplay.innerHTML = `<i class="fa-solid fa-droplet"></i> Humidity: ${humidity}%`;
         descDisplay.textContent = weatherItem.description;
         weatherEmoji.innerHTML = getWeatherEmoji(weatherItem.id, dt, sunrise, sunset);
 
